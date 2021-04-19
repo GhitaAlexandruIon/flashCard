@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from random import randint
 
 
 def home(request):
@@ -6,10 +7,15 @@ def home(request):
 
 
 def add(request):
+    num1 = randint(0, 10)
+    num2 = randint(0, 10)
     if request.method == 'POST':
         answer = request.POST['answer']
         return render(request, 'add.html', {'answer': answer})
-    return render(request, 'add.html', {})
+    return render(request, 'add.html', {
+        'num1': num1,
+        'num2': num2
+    })
 
 
 def subtract(request):
