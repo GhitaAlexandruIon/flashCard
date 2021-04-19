@@ -6,6 +6,9 @@ def home(request):
 
 
 def add(request):
+    if request.method == 'POST':
+        answer = request.POST['answer']
+        return render(request, 'add.html', {'answer': answer})
     return render(request, 'add.html', {})
 
 
