@@ -11,7 +11,14 @@ def add(request):
     num2 = randint(0, 10)
     if request.method == 'POST':
         answer = request.POST['answer']
-        return render(request, 'add.html', {'answer': answer})
+        old_num1 = request.POST['old_num1']
+        old_num2 = request.POST['old_num2']
+        correct_answer = int(old_num1) + int(old_num2)
+        if int(answer) == correct_answer:
+            my_answer = 'Correct ' + old_num1 + '+' + old_num2 + '=' + answer
+        else:
+            my_answer = 'Incorrect ' + old_num1 + '+' + old_num2 + ' is not ' + answer + ' it is ' + str(correct_answer)
+        return render(request, 'add.html', {'answer': answer, 'my_answer': my_answer, 'num1': num1, 'num2': num2})
     return render(request, 'add.html', {
         'num1': num1,
         'num2': num2

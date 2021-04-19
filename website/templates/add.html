@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {{ my_answer }}
 <h1 class="text-center">{{ num1 }} + {{ num2 }}</h1>
 
     <form action="{% url 'add' %}" method="POST">
     {% csrf_token %}
   <div class="form-group">
     <input type="text" class="form-control"  placeholder="Type your answer here" name="answer">
+      <input type="hidden" name="old_num1" value="{{ num1 }}">
+      <input type="hidden" name="old_num2" value="{{ num2 }}">
   </div>
   <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
