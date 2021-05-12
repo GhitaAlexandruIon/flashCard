@@ -13,6 +13,18 @@ def add(request):
         answer = request.POST['answer']
         old_num1 = request.POST['old_num1']
         old_num2 = request.POST['old_num2']
+
+        # no form filed error handling
+        if not answer:
+            my_answer = 'Fill out the form'
+            color = 'warning'
+            return render(request, 'divide.html', {
+                'color': color,
+                'my_answer': my_answer,
+                'answer': answer,
+                'num1': num1,
+                'num2': num2
+            })
         correct_answer = int(old_num1) + int(old_num2)
         if int(answer) == correct_answer:
             my_answer = 'Correct ' + old_num1 + '+' + old_num2 + '=' + answer
@@ -38,6 +50,18 @@ def subtract(request):
         answer = request.POST['answer']
         old_num1 = request.POST['old_num1']
         old_num2 = request.POST['old_num2']
+
+        # no form filed error handling
+        if not answer:
+            my_answer = 'Fill out the form'
+            color = 'warning'
+            return render(request, 'divide.html', {
+                'color': color,
+                'my_answer': my_answer,
+                'answer': answer,
+                'num1': num1,
+                'num2': num2
+            })
         correct_answer = int(old_num1) - int(old_num2)
         if int(answer) == correct_answer:
             my_answer = 'Correct ' + old_num1 + '-' + old_num2 + '=' + answer
@@ -63,6 +87,18 @@ def multiply(request):
         answer = request.POST['answer']
         old_num1 = request.POST['old_num1']
         old_num2 = request.POST['old_num2']
+
+        # no form filed error handling
+        if not answer:
+            my_answer = 'Fill out the form'
+            color = 'warning'
+            return render(request, 'divide.html', {
+                'color': color,
+                'my_answer': my_answer,
+                'answer': answer,
+                'num1': num1,
+                'num2': num2
+            })
         correct_answer = int(old_num1) * int(old_num2)
         if int(answer) == correct_answer:
             my_answer = 'Correct ' + old_num1 + '*' + old_num2 + '=' + answer
@@ -88,6 +124,18 @@ def divide(request):
         answer = request.POST['answer']
         old_num1 = request.POST['old_num1']
         old_num2 = request.POST['old_num2']
+        # no form filed error handling
+        if not answer:
+            my_answer = 'Fill out the form'
+            color = 'warning'
+            return render(request, 'divide.html', {
+                'color': color,
+                'my_answer': my_answer,
+                'answer': answer,
+                'num1': num1,
+                'num2': num2
+            })
+
         correct_answer = int(old_num1) / int(old_num2)
         if float(answer) == correct_answer:
             my_answer = 'Correct ' + old_num1 + '/' + old_num2 + '=' + answer
