@@ -10,14 +10,31 @@ body{
 }
 .add-header{
     background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 25%, #1e539e 50%, #ff3083 75%,#7800a8 100%), no-repeat;
+
+}
+.subtract-header{
+    background: linear-gradient(135deg, #ffffff 0%, #2e45fd 25%, #1e539e 25%, #1e539e 50%, #ff3083 75%,#ffffcc 100%), no-repeat;
+}
+.multiply-header{
+    background: linear-gradient(135deg, whitesmoke 0%, #ddffdd 25%, mediumspringgreen 25%, dodgerblue 50%, khaki 75%,whitesmoke 100%), no-repeat;
+}
+.divide-header{
+    background: linear-gradient(135deg, #ffffcc 0%, lightslategrey 25%, #1e539e 25%, lightgreen 50%, #ff3083 75%,black 100%), no-repeat;
+}
+.add-header, .subtract-header, .multiply-header, .divide-header{
     margin-top: 20px;
-    opacity: 70%;
     height: 100%;
-    width: 70%;
+    width: 100%;
 }
 #num1{
     margin-right: 20px;
 }
 #num2{
     margin-left: 20px;
+}
+.add:hover, .subtract:hover, .multiply:hover, .divide:hover{
+    color: dodgerblue;
+    transform: rotate(180deg) scale(2);
+    size: 10px;
+    transition: ease-in-out 1s;
 }
