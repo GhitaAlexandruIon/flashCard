@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.answer-alert{
+    margin-top: 10px;
+    transition: ease-out 2s;
+    transform: translate(35);
+}
+.add-header{
+    background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 25%, #1e539e 50%, #ff3083 75%,#7800a8 100%), no-repeat;
+    margin-top: 20px;
+    opacity: 70%;
+    height: 100%;
+    width: 70%;
+}
+#num1{
+    margin-right: 20px;
+}
+#num2{
+    margin-left: 20px;
+}
