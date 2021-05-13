@@ -1,26 +1,79 @@
 {% extends 'base.html' %}
-
+{% load  static %}
 {% block content %}
-    <div class="jumbotron">
+    <br>
+    <div class="jumbotron home-header text-center">
+        <h1>Welcome to Flash Card Operations</h1>
+        <br>
+        <h4>Ready to test your skill?</h4>
+    </div>
+    <div class="jumbotron main-header">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">
+                            <i class="fa fa-plus add"></i>
+                            <strong class="add-title">Add </strong>
+                            <i class="fa fa-plus add"></i>
+                        </h5>
+                        <p class="card-text">someting about add operations
+                        ...coming soon...</p>
+                        <a href="{%url 'add'  %}" class="btn btn-primary btn-lg">
+                            <i class="fa fa-plus add"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">
+                            <i class="fa fa-minus subtract"></i>
+                            <strong class="add-title">Subtract</strong>
+                             <i class="fa fa-minus subtract"></i>
+                        </h5>
+                        <p class="card-text">someting about subtract operations
+                        ...coming soon...</p>
+                        <a href="{%url 'subtract'  %}" class="btn btn-primary btn-lg">
+                             <i class="fa fa-minus subtract"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa fa-times multiply"></i>
+                            <strong class="add-title">Multiply</strong>
+                            <i class="fa fa-times multiply"></i>
+                        </h5>
+                        <p class="card-text">someting about multiply operations
+                        ...coming soon...</p>
+                        <a href="{%url 'multiply'  %}" class="btn btn-primary btn-lg">
+                            <i class="fa fa-times multiply"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa fa-divide divide"></i>
+                            <strong class="add-title">Divide</strong>
+                            <i class="fa fa-divide divide"></i>
+                        </h5>
+                        <p class="card-text">someting about divide operations
+                        ...coming soon...</p>
+                        <a href="{%url 'divide'  %}" class="btn btn-primary btn-lg">
+                            <i class="fa fa-divide divide"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 {% endblock %}

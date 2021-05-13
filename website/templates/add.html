@@ -22,7 +22,7 @@
     </h1>
         </div>
 
-    <form action="{% url 'add' %}" method="POST">
+    <form action="{% url 'add' %}" method="POST" class="answer-form">
         {% csrf_token %}
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Type your answer here" name="answer" aria-label="">

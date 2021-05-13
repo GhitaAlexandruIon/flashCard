@@ -24,7 +24,7 @@
     </h1>
         </div>
 
-        <form action="{% url 'subtract' %}" method="POST">
+        <form action="{% url 'subtract' %}" method="POST" class="answer-form">
             {% csrf_token %}
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Type your answer here" name="answer">

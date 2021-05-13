@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(#67B26F, #4ca2cd), no-repeat;
+    background-size: cover;
 }
 .answer-alert{
     margin-top: 10px;
@@ -22,7 +24,7 @@ body{
     background: linear-gradient(135deg, #ffffcc 0%, lightslategrey 25%, #1e539e 25%, lightgreen 50%, #ff3083 75%,black 100%), no-repeat;
 }
 .add-header, .subtract-header, .multiply-header, .divide-header{
-    margin-top: 20px;
+    margin-top: 70px;
     height: 100%;
     width: 100%;
 }
@@ -37,4 +39,25 @@ body{
     transform: rotate(180deg) scale(2);
     size: 10px;
     transition: ease-in-out 1s;
+}
+footer div.jumbotron{
+    margin: 0;
+}
+.main-header {
+    margin-top: 30px;
+    background: linear-gradient(#fffc00, #00c3ff);
+}
+.home-header{
+    background: linear-gradient(#ffffcc, #fffc00);
+}
+.add-title:hover{
+    color: dodgerblue;
+    transform: rotate(1deg) scale(3);
+    transition: ease-in .3s;
+}
+.card{
+    background: linear-gradient(#00c3ff, #ffff1c);
+}
+.answer-form{
+    margin-bottom: 50px;
 }
